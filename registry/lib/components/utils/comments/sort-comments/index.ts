@@ -1,5 +1,9 @@
 import { defineComponentMetadata } from '@/components/define'
-import { addComponentListener, getComponentSettings, removeComponentListener } from '@/core/settings'
+import {
+  addComponentListener,
+  getComponentSettings,
+  removeComponentListener,
+} from '@/core/settings'
 import {
   CommentArea,
   CommentItem,
@@ -212,23 +216,9 @@ const entry = async () => {
   autoSort = settings.options.autoSort
   panelVisible = settings.options.showPanel
 
-  addComponentListener(
-    'sortComments.sortMode',
-    onSortModeChange,
-    true,
-  )
-
-  addComponentListener(
-    'sortComments.autoSort',
-    onAutoSortChange,
-    true,
-  )
-
-  addComponentListener(
-    'sortComments.showPanel',
-    onShowPanelChange,
-    true,
-  )
+  addComponentListener('sortComments.sortMode', onSortModeChange, true)
+  addComponentListener('sortComments.autoSort', onAutoSortChange, true)
+  addComponentListener('sortComments.showPanel', onShowPanelChange, true)
 
   // 始终创建面板，通过 hidden class 控制显示
   await createPanel()

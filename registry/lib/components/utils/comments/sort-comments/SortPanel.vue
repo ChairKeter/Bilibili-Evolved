@@ -9,9 +9,7 @@
       transformOrigin: 'right bottom',
     }"
   >
-    <div class="panel-header" @mousedown="startDrag">
-      评论排序
-    </div>
+    <div class="panel-header" @mousedown="startDrag">评论排序</div>
     <div class="panel-modes">
       <button
         v-for="mode in modeGroups"
@@ -279,11 +277,7 @@ export default defineComponent({
   width: 16px;
   height: 16px;
   cursor: nwse-resize;
-  background: linear-gradient(
-    135deg,
-    transparent 50%,
-    rgba(255, 255, 255, 0.3) 50%
-  );
+  background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.3) 50%);
   border-radius: 0 0 12px 0;
 }
 </style>
